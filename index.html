@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Sorry Pooja Rani ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        -45deg,
+        #ff758c,
+        #ff7eb3,
+        #ff4d6d,
+        #ff9a9e
+    );
+
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+
+    position:relative;
+}
+
+/* Animated Gradient */
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Floating Hearts */
+
+.floating-heart{
+    position:absolute;
+    color:rgba(255,255,255,0.4);
+    animation:floatUp linear infinite;
+    pointer-events:none;
+}
+
+@keyframes floatUp{
+
+    from{
+        transform:translateY(100vh) scale(0.5);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(-120vh) scale(1.4);
+        opacity:1;
+    }
+}
+
+/* Main Card */
+
+.card{
+
+    width:90%;
+    max-width:520px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.2),
+    inset 0 0 20px rgba(255,255,255,0.2);
+
+    position:relative;
+    z-index:2;
+
+    animation:cardEnter 1s ease;
+}
+
+/* Card Animation */
+
+@keyframes cardEnter{
+
+    from{
+        opacity:0;
+        transform:translateY(50px) scale(0.8);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Heart */
+
+.heart{
+
+    font-size:90px;
+
+    animation:heartbeat 1s infinite;
+
+    filter:drop-shadow(0 0 15px rgba(255,0,100,0.7));
+}
+
+@keyframes heartbeat{
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.15);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Heading */
+
+h1{
+
+    color:white;
+
+    margin-top:15px;
+
+    font-size:34px;
+
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+}
+
+/* Paragraph */
+
+p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-top:20px;
+}
+
+/* Buttons Area */
+
+.buttons{
+
+    margin-top:35px;
+    position:relative;
+    height:80px;
+}
+
+/* General Button */
+
+button{
+
+    border:none;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+/* Yes Button */
+
+.yes{
+
+    background:white;
+
+    color:#ff4d6d;
+
+    box-shadow:0 0 20px rgba(255,255,255,0.6);
+}
+
+.yes:hover{
+
+    transform:scale(1.1);
+}
+
+/* No Button */
+
+.no{
+
+    background:rgba(255,255,255,0.25);
+
+    color:white;
+
+    position:fixed;
+
+    backdrop-filter:blur(10px);
+
+    transition:
+    left 0.45s ease,
+    top 0.45s ease,
+    transform 0.45s ease;
+
+    z-index:999;
+
+    box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Final Text */
+
+.final{
+
+    display:none;
+
+    margin-top:30px;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    animation:pop 1s ease;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Music Button */
+
+.music-btn{
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    background:rgba(255,255,255,0.2);
+
+    border:none;
+
+    color:white;
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    backdrop-filter:blur(10px);
+
+    z-index:10;
+}
+
+/* Falling Hearts */
+
+@keyframes fall{
+
+    to{
+
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    .card{
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .heart{
+        font-size:75px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Music Button -->
+
+<button class="music-btn" onclick="toggleMusic()">
+🎵
+</button>
+
+<!-- Main Card -->
+
+<div class="card">
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <h1>
+        Dear Pooja Rani...
+    </h1>
+
+    <p id="message">
+
+        I'm really sorry 🥺<br><br>
+
+        I know I made mistakes and hurt you...<br>
+
+        But honestly... you mean everything to me ❤️<br><br>
+
+        Please forgive me?
+
+    </p>
+
+    <div class="buttons">
+
+        <button class="yes" onclick="forgiveMe()">
+            Forgive Me 💖
+        </button>
+
+    </div>
+
+    <div class="final" id="finalText">
+
+        Yayyyyy ❤️<br>
+
+        Thank you for forgiving me 🥹
+
+    </div>
+
+</div>
+
+<!-- Still Angry Button -->
+
+<button class="no" id="noBtn">
+    Still Angry 😤
+</button>
+
+<!-- Music -->
+
+<audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+/* =========================
+   Floating Hearts Background
+========================= */
+
+function createFloatingHearts(){
+
+    setInterval(()=>{
+
+        let heart = document.createElement("div");
+
+        heart.classList.add("floating-heart");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.left =
+        Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+        (Math.random() * 20 + 10) + "px";
+
+        heart.style.animationDuration =
+        (Math.random() * 5 + 5) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },10000);
+
+    },400);
+}
+
+createFloatingHearts();
+
+/* =========================
+   Running Angry Button
+========================= */
+
+const noBtn = document.getElementById("noBtn");
+
+let moveInterval;
+
+function moveButton(){
+
+    const padding = 20;
+
+    const maxX =
+    window.innerWidth -
+    noBtn.offsetWidth -
+    padding;
+
+    const maxY =
+    window.innerHeight -
+    noBtn.offsetHeight -
+    padding;
+
+    const randomX =
+    Math.random() * maxX;
+
+    const randomY =
+    Math.random() * maxY;
+
+    noBtn.style.left =
+    randomX + "px";
+
+    noBtn.style.top =
+    randomY + "px";
+
+    noBtn.style.transform =
+    `rotate(${Math.random()*40-20}deg)`;
+}
+
+/* Start Infinite Running */
+
+function startRunning(){
+
+    moveButton();
+
+    moveInterval = setInterval(()=>{
+
+        moveButton();
+
+    },700);
+}
+
+startRunning();
+
+/* Escape instantly on hover */
+
+noBtn.addEventListener("mouseover", moveButton);
+
+noBtn.addEventListener("click", moveButton);
+
+/* =========================
+   Forgive Function
+========================= */
+
+function forgiveMe(){
+
+    clearInterval(moveInterval);
+
+    noBtn.style.display = "none";
+
+    document.getElementById("message").innerHTML = `
+
+        Thank you for giving me another chance ❤️<br><br>
+
+        I promise I'll always care about your smile 🥺
+
+    `;
+
+    document.getElementById("finalText").style.display =
+    "block";
+
+    heartExplosion();
+}
+
+/* =========================
+   Heart Explosion
+========================= */
+
+function heartExplosion(){
+
+    for(let i=0;i<120;i++){
+
+        let heart =
+        document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+
+        heart.style.left =
+        Math.random() *
+        window.innerWidth + "px";
+
+        heart.style.top = "-20px";
+
+        heart.style.fontSize =
+        (Math.random()*25+15)+"px";
+
+        heart.style.animation =
+        `fall ${Math.random()*3+3}s linear forwards`;
+
+        heart.style.pointerEvents = "none";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },6000);
+    }
+}
+
+/* =========================
+   Music Toggle
+========================= */
+
+const music =
+document.getElementById("bgMusic");
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play();
+
+    }else{
+
+        music.pause();
+    }
+}
+
+</script>
+
+</body>
+</html>
